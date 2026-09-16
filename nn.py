@@ -49,7 +49,8 @@ class LinearClassifier:
         # If X is [batch_size=2, n_input=784] and W is [784, 10], b is [10]
         # Then X @ W gives [2, 10] and adding b gives final [2, 10]
         
-        raise NotImplementedError
+        output = X @ self.W + self.b
+        return output
     
     def sigmoid(self, z):
         """Sigmoid activation function"""
@@ -147,8 +148,6 @@ class TwoLayerMLP:
         # z1 = ...  # Linear transformation result
         # h1 = ...  # Activated hidden layer output
         
-        raise NotImplementedError
-        
         # Second layer: linear transformation (no activation for output logits)
         # TODO: Implement z2 = h1 @ W2 + b2
         #
@@ -164,8 +163,10 @@ class TwoLayerMLP:
         # Variable to define:
         # z2 = ...  # Final output logits
         
-        raise NotImplementedError
-        
+        z1 = X @ self.W1 + self.b1
+        h1 = self.sigmoid(z1)
+
+        z2 = h1 @ self.W2 + self.b2
         return z2
     
     def predict(self, X):
