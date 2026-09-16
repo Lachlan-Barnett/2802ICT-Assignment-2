@@ -293,7 +293,8 @@ class ThreeLayerMLP:
         #    - z1 will have shape (batch_size, n_hidden1) = (batch_size, 30)
         # 2. Apply sigmoid activation: h1 = sigmoid(z1)
         
-        raise NotImplementedError
+        z1 = X @ self.W1 + self.b1
+        h1 = self.sigmoid(z1)
         
         # Second layer: linear transformation + sigmoid activation
         # TODO: Implement z2 = h1 @ W2 + b2, then h2_raw = sigmoid(z2)
@@ -306,7 +307,8 @@ class ThreeLayerMLP:
         #    - z2 will have shape (batch_size, n_hidden2) = (batch_size, 30)
         # 2. Apply sigmoid activation: h2_raw = sigmoid(z2)
         
-        raise NotImplementedError
+        z2 = h1 @ self.W2 + self.b2
+        h2_raw = self.sigmoid(z2)
         
         # Apply residual connection if enabled
         # TODO: Implement residual connection logic
@@ -321,14 +323,14 @@ class ThreeLayerMLP:
         #   h2 = h2_raw       # Use normal activation without skip connection
         
         if self.use_residual:
-            raise NotImplementedError  # Residual connection: add previous layer output
+            h2 = h2_raw + h1  # Residual connection: add previous layer output
         else:
-            raise NotImplementedError
+            h2 = h2_raw
         
         # Third layer: linear transformation (output layer)
         # TODO: Implement z3 = h2 @ W3 + b3
         
-        raise NotImplementedError
+        z3 = h2 @ self.W3 + self.b3
         
         return z3
     
