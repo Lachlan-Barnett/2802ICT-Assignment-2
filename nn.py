@@ -194,7 +194,12 @@ class TwoLayerMLP:
         # 3. W2: weight matrix of second layer (shape: n_hidden × n_output)  
         # 4. b2: bias vector of second layer (shape: n_output)
         
-        raise NotImplementedError
+        return np.concatenate([
+            self.W1.flatten(),
+            self.b1.flatten(),
+            self.W2.flatten(),
+            self.b2.flatten(),
+        ])
     
     def set_params(self, params):
         """Set model parameters from a flat array"""
