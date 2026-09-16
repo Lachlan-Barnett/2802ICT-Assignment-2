@@ -353,7 +353,14 @@ class ThreeLayerMLP:
         # This function is needed for automatic differentiation (autograd).
         # The grad() function requires all parameters to be in a single array.
         
-        raise NotImplementedError
+        return np.concatenate([
+            self.W1.flatten(),
+            self.b1.flatten(),
+            self.W2.flatten(),
+            self.b2.flatten(),
+            self.W3.flatten(),
+            self.b3.flatten(),
+        ])
     
     def set_params(self, params):
         """Set model parameters from a flat array"""
