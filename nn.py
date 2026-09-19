@@ -8,7 +8,7 @@ class LinearClassifier:
     Linear classifier: y = Wx + b
     Network structure: [784, 10]
     """
-    def __init__(self, n_input, n_output):
+    def __init__(self, s, n_input, n_output):
         """
         Initialize linear classifier parameters
         Args:
