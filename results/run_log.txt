@@ -1,0 +1,683 @@
+C:\Users\Administrator\Downloads\2802ICT-Assignment-2\train.py:398: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+C:\Users\Administrator\Downloads\2802ICT-Assignment-2\train.py:398: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+C:\Users\Administrator\AppData\Roaming\Python\Python314\site-packages\autograd\numpy\numpy_vjps.py:127: RuntimeWarning: overflow encountered in square
+  lambda ans, x, y: unbroadcast_f(y, lambda g: -g * x / y**2),
+C:\Users\Administrator\AppData\Roaming\Python\Python314\site-packages\autograd\tracer.py:93: RuntimeWarning: overflow encountered in exp
+  return f_raw(*args, **kwargs)
+C:\Users\Administrator\AppData\Roaming\Python\Python314\site-packages\autograd\numpy\numpy_vjps.py:163: RuntimeWarning: invalid value encountered in multiply
+  defvjp(anp.exp, lambda ans, x: lambda g: ans * g)
+
+======================================================================
+EXPERIMENT (a): Baseline Network Training
+======================================================================
+
+--- (a) model=linear dataset=full ---
+Loading Fashion-MNIST dataset...
+Training data shape: (60000, 784), Labels shape: (60000,)
+Test data shape: (10000, 784), Labels shape: (10000,)
+Number of classes: 10
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 0.4809 | Val Loss: 0.5081 | Test Loss: 0.4928 | Train Acc: 83.59% | Val Acc: 83.18% | Test Acc: 83.86% | Time: 10.02s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.3452 | Val Loss: 0.4622 | Test Loss: 0.4497 | Train Acc: 85.07% | Val Acc: 84.03% | Test Acc: 84.44% | Time: 23.34s
+Epoch  10/20 | Train Loss: 0.3258 | Val Loss: 0.4405 | Test Loss: 0.4327 | Train Acc: 86.52% | Val Acc: 85.10% | Test Acc: 85.52% | Time: 11.18s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.3170 | Val Loss: 0.4482 | Test Loss: 0.4385 | Train Acc: 86.23% | Val Acc: 84.58% | Test Acc: 84.83% | Time: 9.15s
+Epoch  20/20 | Train Loss: 0.3109 | Val Loss: 0.4498 | Test Loss: 0.4392 | Train Acc: 86.26% | Val Acc: 84.97% | Test Acc: 84.71% | Time: 36.37s
+
+Model selection results:
+  Best validation accuracy: 85.34% (epoch 12)
+  Test accuracy of best model: 85.51%
+
+--- (a) model=linear dataset=50pct ---
+Loading Fashion-MNIST dataset...
+Training data shape: (30000, 784), Labels shape: (30000,)
+Test data shape: (10000, 784), Labels shape: (10000,)
+Number of classes: 10
+
+Creating validation split with 20% of training data...
+  Class 0: 3000 -> Train: 2400, Val: 600
+  Class 1: 3000 -> Train: 2400, Val: 600
+  Class 2: 3000 -> Train: 2400, Val: 600
+  Class 3: 3000 -> Train: 2400, Val: 600
+  Class 4: 3000 -> Train: 2400, Val: 600
+  Class 5: 3000 -> Train: 2400, Val: 600
+  Class 6: 3000 -> Train: 2400, Val: 600
+  Class 7: 3000 -> Train: 2400, Val: 600
+  Class 8: 3000 -> Train: 2400, Val: 600
+  Class 9: 3000 -> Train: 2400, Val: 600
+
+Final split:
+  Training set: 24000 samples
+  Validation set: 6000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 0.5516 | Val Loss: 0.5729 | Test Loss: 0.5546 | Train Acc: 81.23% | Val Acc: 80.50% | Test Acc: 81.03% | Time: 15.81s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.3647 | Val Loss: 0.4809 | Test Loss: 0.4596 | Train Acc: 85.08% | Val Acc: 83.47% | Test Acc: 84.57% | Time: 7.84s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.3370 | Val Loss: 0.4841 | Test Loss: 0.4631 | Train Acc: 85.22% | Val Acc: 83.02% | Test Acc: 84.41% | Time: 10.39s
+Epoch  15/20 | Train Loss: 0.3228 | Val Loss: 0.4643 | Test Loss: 0.4392 | Train Acc: 86.48% | Val Acc: 84.32% | Test Acc: 85.07% | Time: 8.03s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.3143 | Val Loss: 0.4561 | Test Loss: 0.4340 | Train Acc: 87.08% | Val Acc: 84.25% | Test Acc: 85.38% | Time: 8.47s
+
+Model selection results:
+  Best validation accuracy: 84.47% (epoch 17)
+  Test accuracy of best model: 85.22%
+
+--- (a) model=linear dataset=10pct ---
+Loading Fashion-MNIST dataset...
+Training data shape: (6000, 784), Labels shape: (6000,)
+Test data shape: (10000, 784), Labels shape: (10000,)
+Number of classes: 10
+
+Creating validation split with 20% of training data...
+  Class 0: 600 -> Train: 480, Val: 120
+  Class 1: 600 -> Train: 480, Val: 120
+  Class 2: 600 -> Train: 480, Val: 120
+  Class 3: 600 -> Train: 480, Val: 120
+  Class 4: 600 -> Train: 480, Val: 120
+  Class 5: 600 -> Train: 480, Val: 120
+  Class 6: 600 -> Train: 480, Val: 120
+  Class 7: 600 -> Train: 480, Val: 120
+  Class 8: 600 -> Train: 480, Val: 120
+  Class 9: 600 -> Train: 480, Val: 120
+
+Final split:
+  Training set: 4800 samples
+  Validation set: 1200 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 0.7900 | Val Loss: 0.7063 | Test Loss: 0.7091 | Train Acc: 76.38% | Val Acc: 74.08% | Test Acc: 75.20% | Time: 1.20s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.4311 | Val Loss: 0.5476 | Test Loss: 0.5523 | Train Acc: 82.94% | Val Acc: 81.25% | Test Acc: 81.11% | Time: 1.20s
+Epoch  10/20 | Train Loss: 0.3692 | Val Loss: 0.5023 | Test Loss: 0.5127 | Train Acc: 85.35% | Val Acc: 83.42% | Test Acc: 82.71% | Time: 1.02s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.3402 | Val Loss: 0.4859 | Test Loss: 0.4979 | Train Acc: 86.52% | Val Acc: 82.75% | Test Acc: 83.35% | Time: 0.88s
+Epoch  20/20 | Train Loss: 0.3196 | Val Loss: 0.5073 | Test Loss: 0.5071 | Train Acc: 86.48% | Val Acc: 82.67% | Test Acc: 82.95% | Time: 1.26s
+
+Model selection results:
+  Best validation accuracy: 83.67% (epoch 18)
+  Test accuracy of best model: 83.02%
+
+--- (a) model=mlp dataset=full ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 1.1736 | Val Loss: 0.7261 | Test Loss: 0.7246 | Train Acc: 75.30% | Val Acc: 75.20% | Test Acc: 75.31% | Time: 18.17s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.3955 | Val Loss: 0.4471 | Test Loss: 0.4334 | Train Acc: 84.99% | Val Acc: 84.42% | Test Acc: 85.09% | Time: 10.77s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.3320 | Val Loss: 0.3996 | Test Loss: 0.3914 | Train Acc: 87.17% | Val Acc: 85.91% | Test Acc: 86.49% | Time: 12.29s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.3026 | Val Loss: 0.3882 | Test Loss: 0.3784 | Train Acc: 87.68% | Val Acc: 86.17% | Test Acc: 86.47% | Time: 17.36s
+Epoch  20/20 | Train Loss: 0.2823 | Val Loss: 0.3870 | Test Loss: 0.3739 | Train Acc: 87.77% | Val Acc: 86.23% | Test Acc: 86.58% | Time: 22.40s
+
+Model selection results:
+  Best validation accuracy: 86.85% (epoch 18)
+  Test accuracy of best model: 87.24%
+
+--- (a) model=mlp dataset=50pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 3000 -> Train: 2400, Val: 600
+  Class 1: 3000 -> Train: 2400, Val: 600
+  Class 2: 3000 -> Train: 2400, Val: 600
+  Class 3: 3000 -> Train: 2400, Val: 600
+  Class 4: 3000 -> Train: 2400, Val: 600
+  Class 5: 3000 -> Train: 2400, Val: 600
+  Class 6: 3000 -> Train: 2400, Val: 600
+  Class 7: 3000 -> Train: 2400, Val: 600
+  Class 8: 3000 -> Train: 2400, Val: 600
+  Class 9: 3000 -> Train: 2400, Val: 600
+
+Final split:
+  Training set: 24000 samples
+  Validation set: 6000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 1.5338 | Val Loss: 1.0120 | Test Loss: 1.0134 | Train Acc: 62.01% | Val Acc: 62.93% | Test Acc: 61.64% | Time: 12.72s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.4927 | Val Loss: 0.5291 | Test Loss: 0.5132 | Train Acc: 82.49% | Val Acc: 81.33% | Test Acc: 81.92% | Time: 12.01s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.3828 | Val Loss: 0.4675 | Test Loss: 0.4406 | Train Acc: 85.31% | Val Acc: 83.48% | Test Acc: 84.67% | Time: 11.71s
+Epoch  15/20 | Train Loss: 0.3404 | Val Loss: 0.4339 | Test Loss: 0.4036 | Train Acc: 86.65% | Val Acc: 84.62% | Test Acc: 85.81% | Time: 11.96s
+Epoch  20/20 | Train Loss: 0.3161 | Val Loss: 0.4160 | Test Loss: 0.3890 | Train Acc: 87.66% | Val Acc: 85.15% | Test Acc: 86.04% | Time: 12.95s
+
+Model selection results:
+  Best validation accuracy: 85.25% (epoch 19)
+  Test accuracy of best model: 86.31%
+
+--- (a) model=mlp dataset=10pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 600 -> Train: 480, Val: 120
+  Class 1: 600 -> Train: 480, Val: 120
+  Class 2: 600 -> Train: 480, Val: 120
+  Class 3: 600 -> Train: 480, Val: 120
+  Class 4: 600 -> Train: 480, Val: 120
+  Class 5: 600 -> Train: 480, Val: 120
+  Class 6: 600 -> Train: 480, Val: 120
+  Class 7: 600 -> Train: 480, Val: 120
+  Class 8: 600 -> Train: 480, Val: 120
+  Class 9: 600 -> Train: 480, Val: 120
+
+Final split:
+  Training set: 4800 samples
+  Validation set: 1200 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2423 | Val Loss: 2.0970 | Test Loss: 2.0966 | Train Acc: 22.17% | Val Acc: 22.00% | Test Acc: 22.56% | Time: 3.23s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 1.0469 | Val Loss: 1.0080 | Test Loss: 1.0143 | Train Acc: 62.21% | Val Acc: 59.83% | Test Acc: 60.56% | Time: 2.43s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.7145 | Val Loss: 0.7318 | Test Loss: 0.7309 | Train Acc: 74.90% | Val Acc: 72.42% | Test Acc: 73.07% | Time: 2.42s
+Epoch  15/20 | Train Loss: 0.5827 | Val Loss: 0.6144 | Test Loss: 0.6182 | Train Acc: 79.15% | Val Acc: 77.58% | Test Acc: 78.04% | Time: 2.26s
+Epoch  20/20 | Train Loss: 0.5055 | Val Loss: 0.5582 | Test Loss: 0.5640 | Train Acc: 80.83% | Val Acc: 80.25% | Test Acc: 79.26% | Time: 2.49s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 80.25% (epoch 20)
+  Test accuracy of best model: 79.26%
+
+--- (a) model=mlp3 dataset=full ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2893 | Val Loss: 2.3074 | Test Loss: 2.3074 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 37.19s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.9965 | Val Loss: 0.8994 | Test Loss: 0.8975 | Train Acc: 67.59% | Val Acc: 67.16% | Test Acc: 66.95% | Time: 26.54s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.4416 | Val Loss: 0.4874 | Test Loss: 0.4777 | Train Acc: 83.39% | Val Acc: 82.71% | Test Acc: 83.26% | Time: 26.11s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.3387 | Val Loss: 0.4166 | Test Loss: 0.4095 | Train Acc: 86.24% | Val Acc: 85.27% | Test Acc: 85.31% | Time: 24.72s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.2920 | Val Loss: 0.4129 | Test Loss: 0.4069 | Train Acc: 86.33% | Val Acc: 85.35% | Test Acc: 85.24% | Time: 26.44s
+
+Model selection results:
+  Best validation accuracy: 86.29% (epoch 19)
+  Test accuracy of best model: 86.10%
+
+--- (a) model=mlp3 dataset=50pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 3000 -> Train: 2400, Val: 600
+  Class 1: 3000 -> Train: 2400, Val: 600
+  Class 2: 3000 -> Train: 2400, Val: 600
+  Class 3: 3000 -> Train: 2400, Val: 600
+  Class 4: 3000 -> Train: 2400, Val: 600
+  Class 5: 3000 -> Train: 2400, Val: 600
+  Class 6: 3000 -> Train: 2400, Val: 600
+  Class 7: 3000 -> Train: 2400, Val: 600
+  Class 8: 3000 -> Train: 2400, Val: 600
+  Class 9: 3000 -> Train: 2400, Val: 600
+
+Final split:
+  Training set: 24000 samples
+  Validation set: 6000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2892 | Val Loss: 2.3068 | Test Loss: 2.3068 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 12.64s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 2.0803 | Val Loss: 1.7203 | Test Loss: 1.7184 | Train Acc: 24.46% | Val Acc: 24.13% | Test Acc: 24.07% | Time: 12.55s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.9471 | Val Loss: 0.9221 | Test Loss: 0.9203 | Train Acc: 65.92% | Val Acc: 65.48% | Test Acc: 65.15% | Time: 16.22s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.5688 | Val Loss: 0.6124 | Test Loss: 0.6024 | Train Acc: 77.15% | Val Acc: 76.52% | Test Acc: 76.13% | Time: 22.82s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.4290 | Val Loss: 0.5131 | Test Loss: 0.4888 | Train Acc: 83.81% | Val Acc: 82.18% | Test Acc: 82.91% | Time: 17.02s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 82.18% (epoch 20)
+  Test accuracy of best model: 82.91%
+
+--- (a) model=mlp3 dataset=10pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 600 -> Train: 480, Val: 120
+  Class 1: 600 -> Train: 480, Val: 120
+  Class 2: 600 -> Train: 480, Val: 120
+  Class 3: 600 -> Train: 480, Val: 120
+  Class 4: 600 -> Train: 480, Val: 120
+  Class 5: 600 -> Train: 480, Val: 120
+  Class 6: 600 -> Train: 480, Val: 120
+  Class 7: 600 -> Train: 480, Val: 120
+  Class 8: 600 -> Train: 480, Val: 120
+  Class 9: 600 -> Train: 480, Val: 120
+
+Final split:
+  Training set: 4800 samples
+  Validation set: 1200 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2893 | Val Loss: 2.3047 | Test Loss: 2.3047 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 4.31s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 2.2899 | Val Loss: 2.3062 | Test Loss: 2.3062 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 3.45s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 2.2912 | Val Loss: 2.3054 | Test Loss: 2.3054 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 2.58s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 2.2923 | Val Loss: 2.3046 | Test Loss: 2.3046 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 2.71s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 2.2892 | Val Loss: 2.3013 | Test Loss: 2.3013 | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 3.11s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 10.00% (epoch 1)
+  Test accuracy of best model: 10.00%
+
+--- (a) model=mlp3_res dataset=full ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 1.0819 | Val Loss: 0.6683 | Test Loss: 0.6646 | Train Acc: 75.95% | Val Acc: 75.94% | Test Acc: 76.17% | Time: 35.27s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.3548 | Val Loss: 0.4334 | Test Loss: 0.4185 | Train Acc: 85.36% | Val Acc: 84.60% | Test Acc: 85.30% | Time: 25.36s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.2901 | Val Loss: 0.3846 | Test Loss: 0.3774 | Train Acc: 87.62% | Val Acc: 86.52% | Test Acc: 86.72% | Time: 30.72s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.2604 | Val Loss: 0.3809 | Test Loss: 0.3702 | Train Acc: 87.99% | Val Acc: 86.37% | Test Acc: 86.97% | Time: 26.45s
+Epoch  20/20 | Train Loss: 0.2394 | Val Loss: 0.3660 | Test Loss: 0.3545 | Train Acc: 88.73% | Val Acc: 86.78% | Test Acc: 86.97% | Time: 33.10s
+
+Model selection results:
+  Best validation accuracy: 87.33% (epoch 18)
+  Test accuracy of best model: 87.83%
+
+--- (a) model=mlp3_res dataset=50pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 3000 -> Train: 2400, Val: 600
+  Class 1: 3000 -> Train: 2400, Val: 600
+  Class 2: 3000 -> Train: 2400, Val: 600
+  Class 3: 3000 -> Train: 2400, Val: 600
+  Class 4: 3000 -> Train: 2400, Val: 600
+  Class 5: 3000 -> Train: 2400, Val: 600
+  Class 6: 3000 -> Train: 2400, Val: 600
+  Class 7: 3000 -> Train: 2400, Val: 600
+  Class 8: 3000 -> Train: 2400, Val: 600
+  Class 9: 3000 -> Train: 2400, Val: 600
+
+Final split:
+  Training set: 24000 samples
+  Validation set: 6000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 1.4516 | Val Loss: 0.9254 | Test Loss: 0.9284 | Train Acc: 63.85% | Val Acc: 64.48% | Test Acc: 63.34% | Time: 27.08s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.4397 | Val Loss: 0.5109 | Test Loss: 0.4893 | Train Acc: 83.32% | Val Acc: 82.08% | Test Acc: 82.69% | Time: 22.65s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.3446 | Val Loss: 0.4600 | Test Loss: 0.4308 | Train Acc: 85.46% | Val Acc: 83.85% | Test Acc: 85.06% | Time: 22.65s
+Epoch  15/20 | Train Loss: 0.3015 | Val Loss: 0.4314 | Test Loss: 0.4027 | Train Acc: 86.87% | Val Acc: 84.85% | Test Acc: 85.32% | Time: 19.18s
+Epoch  20/20 | Train Loss: 0.2742 | Val Loss: 0.4049 | Test Loss: 0.3781 | Train Acc: 88.25% | Val Acc: 85.70% | Test Acc: 86.48% | Time: 18.66s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 85.70% (epoch 20)
+  Test accuracy of best model: 86.48%
+
+--- (a) model=mlp3_res dataset=10pct ---
+
+Creating validation split with 20% of training data...
+  Class 0: 600 -> Train: 480, Val: 120
+  Class 1: 600 -> Train: 480, Val: 120
+  Class 2: 600 -> Train: 480, Val: 120
+  Class 3: 600 -> Train: 480, Val: 120
+  Class 4: 600 -> Train: 480, Val: 120
+  Class 5: 600 -> Train: 480, Val: 120
+  Class 6: 600 -> Train: 480, Val: 120
+  Class 7: 600 -> Train: 480, Val: 120
+  Class 8: 600 -> Train: 480, Val: 120
+  Class 9: 600 -> Train: 480, Val: 120
+
+Final split:
+  Training set: 4800 samples
+  Validation set: 1200 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2138 | Val Loss: 2.1284 | Test Loss: 2.1278 | Train Acc: 22.33% | Val Acc: 22.08% | Test Acc: 22.07% | Time: 4.27s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.9315 | Val Loss: 0.9137 | Test Loss: 0.9214 | Train Acc: 66.90% | Val Acc: 66.42% | Test Acc: 65.62% | Time: 3.96s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.6155 | Val Loss: 0.6651 | Test Loss: 0.6688 | Train Acc: 75.77% | Val Acc: 74.50% | Test Acc: 74.03% | Time: 4.12s
+Epoch  15/20 | Train Loss: 0.5046 | Val Loss: 0.5642 | Test Loss: 0.5729 | Train Acc: 80.65% | Val Acc: 79.17% | Test Acc: 78.99% | Time: 4.08s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.4347 | Val Loss: 0.5402 | Test Loss: 0.5443 | Train Acc: 81.60% | Val Acc: 80.58% | Test Acc: 79.63% | Time: 4.14s
+
+Model selection results:
+  Best validation accuracy: 81.42% (epoch 18)
+  Test accuracy of best model: 80.15%
+Wrote ./results\experiment_a_summary.csv
+
+======================================================================
+EXPERIMENT (b): Learning Rate Analysis
+======================================================================
+
+--- (b) lr=0.001 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.001, Batch size: 4
+Epoch   1/20 | Train Loss: 2.2547 | Val Loss: 2.1004 | Test Loss: 2.0983 | Train Acc: 35.36% | Val Acc: 35.43% | Test Acc: 35.05% | Time: 32.37s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 1.0523 | Val Loss: 1.0095 | Test Loss: 1.0099 | Train Acc: 63.33% | Val Acc: 63.34% | Test Acc: 63.03% | Time: 32.43s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.7423 | Val Loss: 0.7357 | Test Loss: 0.7354 | Train Acc: 74.16% | Val Acc: 74.52% | Test Acc: 73.99% | Time: 30.06s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.6124 | Val Loss: 0.6163 | Test Loss: 0.6138 | Train Acc: 77.88% | Val Acc: 77.78% | Test Acc: 77.96% | Time: 17.95s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.5390 | Val Loss: 0.5497 | Test Loss: 0.5430 | Train Acc: 81.39% | Val Acc: 81.02% | Test Acc: 81.33% | Time: 28.82s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 81.02% (epoch 20)
+  Test accuracy of best model: 81.33%
+
+--- (b) lr=0.01 (reusing experiment-a baseline run) ---
+
+--- (b) lr=1.0 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 1.0, Batch size: 4
+Epoch   1/20 | Train Loss: 0.4114 | Val Loss: 0.8367 | Test Loss: 0.8569 | Train Acc: 70.63% | Val Acc: 70.36% | Test Acc: 70.14% | Time: 26.44s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.3353 | Val Loss: 0.6155 | Test Loss: 0.6140 | Train Acc: 77.28% | Val Acc: 76.42% | Test Acc: 76.56% | Time: 30.22s
+Epoch  10/20 | Train Loss: 0.2864 | Val Loss: 0.5340 | Test Loss: 0.5173 | Train Acc: 83.71% | Val Acc: 82.67% | Test Acc: 83.07% | Time: 33.20s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.2647 | Val Loss: 0.5767 | Test Loss: 0.5660 | Train Acc: 81.95% | Val Acc: 81.26% | Test Acc: 80.91% | Time: 36.20s
+Epoch  20/20 | Train Loss: 0.2785 | Val Loss: 0.5562 | Test Loss: 0.5356 | Train Acc: 81.87% | Val Acc: 80.73% | Test Acc: 81.59% | Time: 35.55s
+
+Model selection results:
+  Best validation accuracy: 83.14% (epoch 17)
+  Test accuracy of best model: 83.47%
+
+--- (b) lr=10 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 10, Batch size: 4
+Epoch   1/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 37.86s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 32.79s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 32.88s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 21.91s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 42.05s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 10.00% (epoch 1)
+  Test accuracy of best model: 10.00%
+
+--- (b) lr=100 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 100, Batch size: 4
+Epoch   1/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 58.29s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 77.99s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 19.93s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 22.38s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: nan | Val Loss: nan | Test Loss: nan | Train Acc: 10.00% | Val Acc: 10.00% | Test Acc: 10.00% | Time: 39.78s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 10.00% (epoch 1)
+  Test accuracy of best model: 10.00%
+Wrote ./results\experiment_b_summary.csv
+
+======================================================================
+EXPERIMENT (c): Mini-batch Size Study
+======================================================================
+
+--- (c) batch_size=1 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 1
+Epoch   1/20 | Train Loss: 0.6301 | Val Loss: 0.4905 | Test Loss: 0.4789 | Train Acc: 83.47% | Val Acc: 82.83% | Test Acc: 83.22% | Time: 112.04s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.2595 | Val Loss: 0.3924 | Test Loss: 0.3799 | Train Acc: 87.22% | Val Acc: 86.18% | Test Acc: 86.44% | Time: 61.90s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.2212 | Val Loss: 0.3713 | Test Loss: 0.3650 | Train Acc: 88.60% | Val Acc: 86.99% | Test Acc: 86.85% | Time: 64.75s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.2016 | Val Loss: 0.3588 | Test Loss: 0.3532 | Train Acc: 89.71% | Val Acc: 87.33% | Test Acc: 87.49% | Time: 58.34s
+Epoch  20/20 | Train Loss: 0.1876 | Val Loss: 0.3616 | Test Loss: 0.3509 | Train Acc: 90.18% | Val Acc: 87.40% | Test Acc: 87.39% | Time: 57.66s
+
+Model selection results:
+  Best validation accuracy: 87.92% (epoch 17)
+  Test accuracy of best model: 87.81%
+
+--- (c) batch_size=4 (reusing experiment-a baseline run) ---
+
+--- (c) batch_size=8 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 8
+Epoch   1/20 | Train Loss: 1.5354 | Val Loss: 1.0075 | Test Loss: 1.0074 | Train Acc: 63.73% | Val Acc: 63.47% | Test Acc: 63.30% | Time: 21.03s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.5030 | Val Loss: 0.5144 | Test Loss: 0.5060 | Train Acc: 82.90% | Val Acc: 82.62% | Test Acc: 82.83% | Time: 7.26s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.4043 | Val Loss: 0.4423 | Test Loss: 0.4308 | Train Acc: 85.19% | Val Acc: 84.52% | Test Acc: 85.30% | Time: 7.24s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.3675 | Val Loss: 0.4188 | Test Loss: 0.4072 | Train Acc: 86.04% | Val Acc: 85.16% | Test Acc: 85.69% | Time: 10.66s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.3441 | Val Loss: 0.4053 | Test Loss: 0.3950 | Train Acc: 86.79% | Val Acc: 85.82% | Test Acc: 86.29% | Time: 7.30s
+
+Model selection results:
+  Best validation accuracy: 85.96% (epoch 18)
+  Test accuracy of best model: 86.52%
+
+--- (c) batch_size=16 ---
+
+Creating validation split with 20% of training data...
+  Class 0: 6000 -> Train: 4800, Val: 1200
+  Class 1: 6000 -> Train: 4800, Val: 1200
+  Class 2: 6000 -> Train: 4800, Val: 1200
+  Class 3: 6000 -> Train: 4800, Val: 1200
+  Class 4: 6000 -> Train: 4800, Val: 1200
+  Class 5: 6000 -> Train: 4800, Val: 1200
+  Class 6: 6000 -> Train: 4800, Val: 1200
+  Class 7: 6000 -> Train: 4800, Val: 1200
+  Class 8: 6000 -> Train: 4800, Val: 1200
+  Class 9: 6000 -> Train: 4800, Val: 1200
+
+Final split:
+  Training set: 48000 samples
+  Validation set: 12000 samples
+
+Starting training for 20 epochs...
+Learning rate: 0.01, Batch size: 16
+Epoch   1/20 | Train Loss: 1.9169 | Val Loss: 1.4075 | Test Loss: 1.4047 | Train Acc: 55.03% | Val Acc: 54.79% | Test Acc: 54.82% | Time: 5.20s
+         *** New best validation accuracy! ***
+Epoch   5/20 | Train Loss: 0.6768 | Val Loss: 0.6588 | Test Loss: 0.6573 | Train Acc: 76.92% | Val Acc: 76.82% | Test Acc: 76.86% | Time: 4.22s
+         *** New best validation accuracy! ***
+Epoch  10/20 | Train Loss: 0.4966 | Val Loss: 0.5132 | Test Loss: 0.5040 | Train Acc: 82.70% | Val Acc: 82.31% | Test Acc: 82.67% | Time: 4.70s
+         *** New best validation accuracy! ***
+Epoch  15/20 | Train Loss: 0.4386 | Val Loss: 0.4667 | Test Loss: 0.4540 | Train Acc: 84.31% | Val Acc: 83.88% | Test Acc: 84.31% | Time: 4.07s
+         *** New best validation accuracy! ***
+Epoch  20/20 | Train Loss: 0.4068 | Val Loss: 0.4424 | Test Loss: 0.4309 | Train Acc: 85.29% | Val Acc: 84.55% | Test Acc: 85.03% | Time: 4.14s
+         *** New best validation accuracy! ***
+
+Model selection results:
+  Best validation accuracy: 84.55% (epoch 20)
+  Test accuracy of best model: 85.03%
+Wrote ./results\experiment_c_summary.csv
+
+======================================================================
+ALL EXPERIMENTS COMPLETE in 9913.8s
+Results (PNGs + CSVs) saved under: C:\Users\Administrator\Downloads\2802ICT-Assignment-2\results
+======================================================================
